@@ -50,8 +50,8 @@ resource "aws_lambda_function" "demicon_get_state_lambda" {
   handler          = "index.handler"
   runtime          = "python3.9"
   timeout          = 30
-  filename         = "../lambda-snippets/demicon-get-state-lambda-code.zip"
-  source_code_hash = filebase64sha256("../lambda-snippets/demicon-get-state-lambda-code.zip")
+  filename         = "lambda-snippets/demicon-get-state-lambda-code.zip"
+  source_code_hash = filebase64sha256("lambda-snippets/demicon-get-state-lambda-code.zip")
   role             = aws_iam_role.demicon_get_state_lambda_role.arn
   memory_size      = 128
 }
